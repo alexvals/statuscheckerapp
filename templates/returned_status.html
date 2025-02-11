@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block body %}
+
+<div class="time_updated">Last updated: {{ last_update_time }} UTC</div>
+
+{% for group, urls in checkurls.items() %}
+
+    <h1 class="group">{{ group }}</h1>
+    {% for url in urls %}
+        {% if returned_statuses.get(url) == "200" %}
+            <p class="url">{{ url}} <span id="good"> {{ returned_statuses.get(url) }}</span></p>
+        {% endif %}
+    {% endfor %}
+
+    {% for url in urls %}
+        {% if returned_statuses.get(url) == "200" %}
+        {% else %}
+            <p class="url">{{ url }} <span id="bad"> {{ returned_statuses.get(url) }}</span></p>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+{% endblock %}

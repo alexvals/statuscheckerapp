@@ -1,0 +1,39 @@
+body {
+    background-color: #646464;
+    color: white;
+    font-weight: bolder;
+    font-family: system-ui;
+}
+h1 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 5px dotted white;
+    margin: 10px;
+}
+.group {
+    border-bottom: 2px solid yellow;
+    font-size: 30pt;
+    color: orange;
+    text-align: left;
+}
+.url {
+    font-size: 20pt;
+    position: relative;
+    width: 850px;
+    border-bottom: 3px solid white;
+    padding: 15px;
+}
+span {
+    background-color: lightgreen;
+    padding: 5px;
+    border-radius: 15px;
+    margin-left: 10%;
+    position: absolute;
+    left: 600px;
+}
+#good {
+    background-color: lightgreen;
+}
+#bad {
+    background-color: lightcoral;
+}
